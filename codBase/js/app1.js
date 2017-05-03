@@ -2,6 +2,7 @@ var calculadora = (function(){
 alert("Funciona");
 
 
+
 function cambiomas(){
   document.getElementById('mas').style="width:90%;height:98%"
 }
