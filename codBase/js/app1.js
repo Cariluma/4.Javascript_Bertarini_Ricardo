@@ -20,8 +20,7 @@ document.getElementById('1').addEventListener("click",function(){
   document.getElementById('1').onmousedown=cambio1;
   document.getElementById('1').onmouseup=inicio1;
   numero = document.getElementById('display').innerHTML;
-  alert(numero);
-    if (numero==0){
+    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=1;
     }else{
       document.getElementById("display").innerHTML+=1;
@@ -32,8 +31,7 @@ document.getElementById('1').addEventListener("click",function(){
   document.getElementById('2').onmousedown=cambio2;
   document.getElementById('2').onmouseup=inicio2;
   numero = document.getElementById('display').innerHTML;
-  alert(numero);
-    if (numero==0){
+   if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=2;
     }else{
       document.getElementById("display").innerHTML+=2;
@@ -44,8 +42,7 @@ document.getElementById("3").addEventListener("click",function(){
   document.getElementById('3').onmousedown=cambio3;
   document.getElementById('3').onmouseup=inicio3;
   numero = document.getElementById('display').innerHTML;
-  alert(numero);
-    if (numero==0){
+    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=3;
     }else{
       document.getElementById("display").innerHTML+=3;
@@ -55,8 +52,7 @@ document.getElementById("4").addEventListener("click",function(){
   document.getElementById('4').onmousedown=cambio4;
   document.getElementById('4').onmouseup=inicio4;
   numero = document.getElementById('display').innerHTML;
-  alert(numero);
-    if (numero==0){
+   if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=4;
     }else{
       document.getElementById("display").innerHTML+=4;
@@ -66,8 +62,7 @@ document.getElementById("5").addEventListener("click",function(){
   document.getElementById('5').onmousedown=cambio5;
   document.getElementById('5').onmouseup=inicio5;
   numero = document.getElementById('display').innerHTML;
-  alert(numero);
-    if (numero==0){
+    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=5;
     }else{
       document.getElementById("display").innerHTML+=5;
@@ -77,8 +72,7 @@ document.getElementById("6").addEventListener("click",function(){
   document.getElementById('6').onmousedown=cambio6;
   document.getElementById('6').onmouseup=inicio6;
   numero = document.getElementById('display').innerHTML;
-  alert(numero);
-    if (numero==0){
+    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=6;
     }else{
       document.getElementById("display").innerHTML+=6;
@@ -88,8 +82,7 @@ document.getElementById("7").addEventListener("click",function(){
   document.getElementById('7').onmousedown=cambio7;
   document.getElementById('7').onmouseup=inicio7;
   numero = document.getElementById('display').innerHTML;
-  alert(numero);
-    if (numero==0){
+    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=7;
     }else{
       document.getElementById("display").innerHTML+=7;
@@ -99,8 +92,7 @@ document.getElementById("8").addEventListener("click",function(){
   document.getElementById('8').onmousedown=cambio8;
   document.getElementById('8').onmouseup=inicio8;
   numero = document.getElementById('display').innerHTML;
-  alert(numero);
-    if (numero==0){
+    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=8;
     }else{
       document.getElementById("display").innerHTML+=8;
@@ -110,20 +102,29 @@ document.getElementById("9").addEventListener("click",function(){
   document.getElementById('9').onmousedown=cambio9;
   document.getElementById('9').onmouseup=inicio9;
   numero = document.getElementById('display').innerHTML;
-  alert(numero);
-    if (numero==0){
+    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=9;
     }else{
       document.getElementById("display").innerHTML+=9;
     }
-});
-document.getElementById("punto").addEventListener("click",function(){
-  document.getElementById("display").innerHTML+=".";
-});
-document.getElementById("on").addEventListener("click",function(){
-  document.getElementById("display").innerHTML=display="0";
-});
+  });
+  document.getElementById("punto").addEventListener("click",function(){
+    numero = document.getElementById('display').innerHTML;
+    alert(numero);
 
+  if(numero.indexOf(".") < 1){
+    document.getElementById("display").innerHTML+=".";
+  }
+  });
+
+  document.getElementById("on").addEventListener("click",function(){
+    document.getElementById("display").innerHTML=display="0";
+  });
+  document.getElementById("sign").addEventListener("click",function(){
+    numero = document.getElementById('display').innerHTML;
+    alert(numero);
+    document.getElementById("display").innerHTML=numero*(-1);
+  });
 function cambiomas(){
   document.getElementById('mas').style="width:90%;height:98%"
 }
