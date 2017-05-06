@@ -1,7 +1,82 @@
+
+
 var calculadora = (function(){
 alert("Funciona");
+//var numero = document.getElementById('display');
+//var contenido = numero.innerHTML;
+//alert(contenido);
+
+document.getElementById("0").addEventListener("click",function(){
+    document.getElementById('0').onmousedown=cambio0;
+    document.getElementById('0').onmouseup=inicio0;
+  if(display+=0){
+    document.getElementById("display").innerHTML+=0;
+
+  }
+});
+
+document.getElementById('1').addEventListener("click",function(){
+  document.getElementById('1').onmousedown=cambio1;
+  document.getElementById('1').onmouseup=inicio1;
+  numero = document.getElementById('display').innerHTML;
+  alert(numero);
+    if (numero==0){
+      document.getElementById("display").innerHTML=1;
+    }else{
+      document.getElementById("display").innerHTML+=1;
+    }
+  });
 
 
+
+
+
+  document.getElementById("2").addEventListener("click",function(){
+  document.getElementById('2').onmousedown=cambio2;
+  document.getElementById('2').onmouseup=inicio2;
+  document.getElementById("display").innerHTML+="2";
+});
+document.getElementById("3").addEventListener("click",function(){
+  document.getElementById('3').onmousedown=cambio3;
+  document.getElementById('3').onmouseup=inicio3;
+  document.getElementById("display").innerHTML+="3";
+});
+document.getElementById("4").addEventListener("click",function(){
+  document.getElementById('4').onmousedown=cambio4;
+  document.getElementById('4').onmouseup=inicio4;
+  document.getElementById("display").innerHTML+="4";
+});
+document.getElementById("5").addEventListener("click",function(){
+  document.getElementById('5').onmousedown=cambio5;
+  document.getElementById('5').onmouseup=inicio5;
+  document.getElementById("display").innerHTML+="5";
+});
+document.getElementById("6").addEventListener("click",function(){
+  document.getElementById('6').onmousedown=cambio6;
+  document.getElementById('6').onmouseup=inicio6;
+  document.getElementById("display").innerHTML+="6";
+});
+document.getElementById("7").addEventListener("click",function(){
+  document.getElementById('7').onmousedown=cambio7;
+  document.getElementById('7').onmouseup=inicio7;
+  document.getElementById("display").innerHTML+="7";
+});
+document.getElementById("8").addEventListener("click",function(){
+  document.getElementById('8').onmousedown=cambio8;
+  document.getElementById('8').onmouseup=inicio8;
+  document.getElementById("display").innerHTML+="8";
+});
+document.getElementById("9").addEventListener("click",function(){
+  document.getElementById('9').onmousedown=cambio9;
+  document.getElementById('9').onmouseup=inicio9;
+  document.getElementById("display").innerHTML+="9";
+});
+document.getElementById("punto").addEventListener("click",function(){
+  document.getElementById("display").innerHTML+=".";
+});
+document.getElementById("on").addEventListener("click",function(){
+  document.getElementById("display").innerHTML=display="0";
+});
 
 function cambiomas(){
   document.getElementById('mas').style="width:90%;height:98%"
@@ -137,25 +212,6 @@ document.getElementById('punto').onmousedown=cambiopunto;
 document.getElementById('punto').onmouseup=iniciopunto;
 document.getElementById('igual').onmousedown=cambioigual;
 document.getElementById('igual').onmouseup=inicioigual;
-document.getElementById('1').onmousedown=cambio1;
-document.getElementById('1').onmouseup=inicio1;
-document.getElementById('2').onmousedown=cambio2;
-document.getElementById('2').onmouseup=inicio2;
-document.getElementById('3').onmousedown=cambio3;
-document.getElementById('3').onmouseup=inicio3;
-document.getElementById('4').onmousedown=cambio4;
-document.getElementById('4').onmouseup=inicio4;
-document.getElementById('5').onmousedown=cambio5;
-document.getElementById('5').onmouseup=inicio5;
-document.getElementById('6').onmousedown=cambio6;
-document.getElementById('6').onmouseup=inicio6;
-document.getElementById('7').onmousedown=cambio7;
-document.getElementById('7').onmouseup=inicio7;
-document.getElementById('8').onmousedown=cambio8;
-document.getElementById('8').onmouseup=inicio8;
-document.getElementById('9').onmousedown=cambio9;
-document.getElementById('9').onmouseup=inicio9;
-document.getElementById('0').onmousedown=cambio0;
-document.getElementById('0').onmouseup=inicio0;
+
 })
 calculadora();
