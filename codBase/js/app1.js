@@ -1,5 +1,4 @@
 var calculadora = (function(){
-alert("Funciona");
 numero = document.getElementById('display').innerHTML;
 n = numero.length;
 var num1 = "";
@@ -7,66 +6,67 @@ var num2 ="";
 var resultado = "";
 var operador = "";
 
-
-
-
-
 document.getElementById('mas').addEventListener("click",function(){
   document.getElementById('mas').onmousedown=cambiomas;
   document.getElementById('mas').onmouseup=iniciomas;
   numero = document.getElementById('display').innerHTML;
-  alert("numero"+numero);
   num1 = numero;
-  alert(num1);
   operador = 1;
-  alert("operador"+operador);
   document.getElementById('display').innerHTML="";
-
   });
+
+  document.getElementById('menos').addEventListener("click",function(){
+    document.getElementById('menos').onmousedown=cambiomenos;
+    document.getElementById('menos').onmouseup=iniciomenos;
+    numero = document.getElementById('display').innerHTML;
+    num1 = numero;
+    operador = 2;
+    document.getElementById('display').innerHTML="";
+    });
+
+    document.getElementById('por').addEventListener("click",function(){
+      document.getElementById('por').onmousedown=cambiopor;
+      document.getElementById('por').onmouseup=iniciopor;
+      numero = document.getElementById('display').innerHTML;
+      num1 = numero;
+      operador = 3;
+      document.getElementById('display').innerHTML="";
+      });
+
+      document.getElementById('dividido').addEventListener("click",function(){
+        document.getElementById('dividido').onmousedown=cambiodividido;
+        document.getElementById('dividido').onmouseup=iniciodividido;
+        numero = document.getElementById('display').innerHTML;
+        num1 = numero;
+        operador = 4;
+        document.getElementById('display').innerHTML="";
+        });
 
   document.getElementById('igual').addEventListener("click",function(){
     document.getElementById('igual').onmousedown=cambioigual;
     document.getElementById('igual').onmouseup=inicioigual;
       numero = document.getElementById('display').innerHTML;
-      alert(numero);
       num2 = numero;
-      alert(num2);
-      alert("operador"+operador);
 
     switch(operador){
     case 1:
-    alert(num1);
-    alert(num2);
-    resultado = parseFloat(num1) + parseFloat(num2);
-    alert(resultado);
-    document.getElementById('display').innerHTML=resultado;
+      resultado = parseFloat(num1) + parseFloat(num2);
+      document.getElementById('display').innerHTML=resultado;
       break;
     case 2:
-      resultado = num1 - num2;
+      resultado = parseFloat(num1) - parseFloat(num2);
       document.getElementById('display').innerHTML=resultado;
-      alert(resultado);
       break;
     case 3:
-      resultado = num1 * num2;
+      resultado = parseFloat(num1) * parseFloat(num2);
       document.getElementById('display').innerHTML=resultado;
-      alert(resultado);
+      break;
     case 4:
-      resultado = num1 / num2;
-      document.getElementById('display').innerHTML=resultado;
-      alert(resultado);
+    resultado = parseFloat(num1) / parseFloat(num2);
+    document.getElementById('display').innerHTML=resultado;
+    break;
     }
     });
-
-
-
-
-
-
-
-
-
-
-
 
 document.getElementById("0").addEventListener("click",function(){
     document.getElementById('0').onmousedown=cambio0;
@@ -210,7 +210,6 @@ document.getElementById("9").addEventListener("click",function(){
 
   document.getElementById("sign").addEventListener("click",function(){
     numero = document.getElementById('display').innerHTML;
-    alert(numero);
     document.getElementById("display").innerHTML=numero*(-1);
   });
 
@@ -336,12 +335,6 @@ document.getElementById('sign').onmousedown=cambiosign;
 document.getElementById('sign').onmouseup=iniciosign;
 document.getElementById('raiz').onmousedown=cambioraiz;
 document.getElementById('raiz').onmouseup=inicioraiz;
-document.getElementById('dividido').onmousedown=cambiodividido;
-document.getElementById('dividido').onmouseup=iniciodividido;
-document.getElementById('por').onmousedown=cambiopor;
-document.getElementById('por').onmouseup=iniciopor;
-document.getElementById('menos').onmousedown=cambiomenos;
-document.getElementById('menos').onmouseup=iniciomenos;
 document.getElementById('punto').onmousedown=cambiopunto;
 document.getElementById('punto').onmouseup=iniciopunto;
 document.getElementById('igual').onmousedown=cambioigual;
