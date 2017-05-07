@@ -1,5 +1,8 @@
 var calculadora = (function(){
 alert("Funciona");
+numero = document.getElementById('display').innerHTML;
+n = numero.length;
+alert(n);
 
 document.getElementById("0").addEventListener("click",function(){
     document.getElementById('0').onmousedown=cambio0;
@@ -14,11 +17,14 @@ document.getElementById('1').addEventListener("click",function(){
   document.getElementById('1').onmousedown=cambio1;
   document.getElementById('1').onmouseup=inicio1;
   numero = document.getElementById('display').innerHTML;
+
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=1;
-    }else {
+      n = n + 1;
+    }else{
       document.getElementById("display").innerHTML+=1;
-  }
+        n = n + 1;
+      }
   });
 
   document.getElementById("2").addEventListener("click",function(){
@@ -27,8 +33,10 @@ document.getElementById('1').addEventListener("click",function(){
   numero = document.getElementById('display').innerHTML;
    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=2;
+      n = n + 1;
     }else{
       document.getElementById("display").innerHTML+=2;
+      n = n + 1;
     }
   });
 
@@ -38,8 +46,10 @@ document.getElementById("3").addEventListener("click",function(){
   numero = document.getElementById('display').innerHTML;
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=3;
+      n = n + 1;
     }else{
       document.getElementById("display").innerHTML+=3;
+      n = n + 1;
     }
 });
 
@@ -49,8 +59,10 @@ document.getElementById("4").addEventListener("click",function(){
   numero = document.getElementById('display').innerHTML;
    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=4;
+      n = n + 1;
     }else{
       document.getElementById("display").innerHTML+=4;
+      n = n + 1;
     }
 });
 
@@ -60,8 +72,10 @@ document.getElementById("5").addEventListener("click",function(){
   numero = document.getElementById('display').innerHTML;
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=5;
+      n = n + 1;
     }else{
       document.getElementById("display").innerHTML+=5;
+      n = n + 1;
     }
 });
 
@@ -71,8 +85,10 @@ document.getElementById("6").addEventListener("click",function(){
   numero = document.getElementById('display').innerHTML;
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=6;
+      n = n + 1;
     }else{
       document.getElementById("display").innerHTML+=6;
+      n = n + 1;
     }
 });
 
@@ -82,8 +98,10 @@ document.getElementById("7").addEventListener("click",function(){
   numero = document.getElementById('display').innerHTML;
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=7;
+      n = n + 1;
     }else{
       document.getElementById("display").innerHTML+=7;
+      n = n + 1;
     }
 });
 
@@ -93,8 +111,10 @@ document.getElementById("8").addEventListener("click",function(){
   numero = document.getElementById('display').innerHTML;
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=8;
+      n = n + 1;
     }else{
       document.getElementById("display").innerHTML+=8;
+      n = n + 1;
     }
 });
 
@@ -104,8 +124,10 @@ document.getElementById("9").addEventListener("click",function(){
   numero = document.getElementById('display').innerHTML;
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=9;
+      n = n + 1;
     }else{
       document.getElementById("display").innerHTML+=9;
+      n = n + 1;
     }
   });
 
@@ -113,6 +135,7 @@ document.getElementById("9").addEventListener("click",function(){
     numero = document.getElementById('display').innerHTML;
   if(numero.indexOf(".") < 1){
     document.getElementById("display").innerHTML+=".";
+    n = n + 1;
   }
   });
 
