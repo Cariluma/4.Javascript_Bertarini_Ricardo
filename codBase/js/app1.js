@@ -2,7 +2,71 @@ var calculadora = (function(){
 alert("Funciona");
 numero = document.getElementById('display').innerHTML;
 n = numero.length;
-alert(n);
+var num1 = "";
+var num2 ="";
+var resultado = "";
+var operador = "";
+
+
+
+
+
+document.getElementById('mas').addEventListener("click",function(){
+  document.getElementById('mas').onmousedown=cambiomas;
+  document.getElementById('mas').onmouseup=iniciomas;
+  numero = document.getElementById('display').innerHTML;
+  alert("numero"+numero);
+  num1 = numero;
+  alert(num1);
+  operador = 1;
+  alert("operador"+operador);
+  document.getElementById('display').innerHTML="";
+
+  });
+
+  document.getElementById('igual').addEventListener("click",function(){
+    document.getElementById('igual').onmousedown=cambioigual;
+    document.getElementById('igual').onmouseup=inicioigual;
+      numero = document.getElementById('display').innerHTML;
+      alert(numero);
+      num2 = numero;
+      alert(num2);
+      alert("operador"+operador);
+
+    switch(operador){
+    case 1:
+    alert(num1);
+    alert(num2);
+    resultado = parseFloat(num1) + parseFloat(num2);
+    alert(resultado);
+    document.getElementById('display').innerHTML=resultado;
+      break;
+    case 2:
+      resultado = num1 - num2;
+      document.getElementById('display').innerHTML=resultado;
+      alert(resultado);
+      break;
+    case 3:
+      resultado = num1 * num2;
+      document.getElementById('display').innerHTML=resultado;
+      alert(resultado);
+    case 4:
+      resultado = num1 / num2;
+      document.getElementById('display').innerHTML=resultado;
+      alert(resultado);
+    }
+    });
+
+
+
+
+
+
+
+
+
+
+
 
 document.getElementById("0").addEventListener("click",function(){
     document.getElementById('0').onmousedown=cambio0;
@@ -17,13 +81,14 @@ document.getElementById('1').addEventListener("click",function(){
   document.getElementById('1').onmousedown=cambio1;
   document.getElementById('1').onmouseup=inicio1;
   numero = document.getElementById('display').innerHTML;
-
+  n = numero.length;
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=1;
       n = n + 1;
-    }else{
+    }else if (n < 9){
       document.getElementById("display").innerHTML+=1;
         n = n + 1;
+        alert(n);
       }
   });
 
@@ -34,7 +99,7 @@ document.getElementById('1').addEventListener("click",function(){
    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=2;
       n = n + 1;
-    }else{
+    }else if (n < 9){
       document.getElementById("display").innerHTML+=2;
       n = n + 1;
     }
@@ -47,7 +112,7 @@ document.getElementById("3").addEventListener("click",function(){
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=3;
       n = n + 1;
-    }else{
+    }else if (n < 9){
       document.getElementById("display").innerHTML+=3;
       n = n + 1;
     }
@@ -60,7 +125,7 @@ document.getElementById("4").addEventListener("click",function(){
    if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=4;
       n = n + 1;
-    }else{
+    }else if (n < 9){
       document.getElementById("display").innerHTML+=4;
       n = n + 1;
     }
@@ -73,7 +138,7 @@ document.getElementById("5").addEventListener("click",function(){
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=5;
       n = n + 1;
-    }else{
+    }else if (n < 9){
       document.getElementById("display").innerHTML+=5;
       n = n + 1;
     }
@@ -86,7 +151,7 @@ document.getElementById("6").addEventListener("click",function(){
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=6;
       n = n + 1;
-    }else{
+    }else if (n < 9){
       document.getElementById("display").innerHTML+=6;
       n = n + 1;
     }
@@ -99,7 +164,7 @@ document.getElementById("7").addEventListener("click",function(){
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=7;
       n = n + 1;
-    }else{
+    }else if (n < 9){
       document.getElementById("display").innerHTML+=7;
       n = n + 1;
     }
@@ -112,7 +177,7 @@ document.getElementById("8").addEventListener("click",function(){
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=8;
       n = n + 1;
-    }else{
+    }else if (n < 9){
       document.getElementById("display").innerHTML+=8;
       n = n + 1;
     }
@@ -125,7 +190,7 @@ document.getElementById("9").addEventListener("click",function(){
     if (numero == 0 && numero != "0."){
       document.getElementById("display").innerHTML=9;
       n = n + 1;
-    }else{
+    }else if (n < 9){
       document.getElementById("display").innerHTML+=9;
       n = n + 1;
     }
@@ -265,8 +330,6 @@ function inicio0(){
   document.getElementById('0').style="width:77.88px;height:62.90px"
 }
 
-document.getElementById('mas').onmousedown=cambiomas;
-document.getElementById('mas').onmouseup=iniciomas;
 document.getElementById('on').onmousedown=cambioon;
 document.getElementById('on').onmouseup=inicioon;
 document.getElementById('sign').onmousedown=cambiosign;
